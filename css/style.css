@@ -37,6 +37,9 @@
 /* ----------------------------------------------------------------
      [ 01 Start Basics ]
 -----------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +48,7 @@
   outline: none;
   list-style: none;
   word-wrap: break-word;
+  
 }
 
 body {
@@ -77,8 +81,19 @@ span, a {
 }
 
 a:hover {
-  color: inherit;
+  color: #a8803b;
   text-decoration: none;
+}
+.imgposabout{
+  position: relative;
+    width: 520px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
 }
 
 .curve {
@@ -112,7 +127,7 @@ a:hover {
 }
 .curve.curve-top:after, .curve.curve-top:before {
   top: 0;
-  border-top: 50px solid #fff;
+  border-top: 50px solid #f9f9f9;
   border-bottom: 0;
 }
 .curve.curve-top:after {
@@ -131,7 +146,7 @@ a:hover {
   content: '';
   width: 0;
   height: 0;
-  border-bottom: 50px solid #fff;
+  border-bottom: 50px solid #f9f9f9;
   position: absolute;
 }
 .curve:after {
@@ -229,7 +244,7 @@ a:hover {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #1A237E;
+  background: rgba(168,128,59,1);
 }
 
 .cd-headline {
@@ -318,15 +333,19 @@ a:hover {
   border: 1px solid transparent;
   position: relative;
   z-index: 3;
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-right: 10px;
   -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all .4s;  
   cursor: pointer;
   outline: none !important;
   overflow: hidden;
+}
+a:hover .butn  {
+  color:rgba(168,128,59,1)!important;
+}
+#solucoes > div > div.second-paragraph-solution.py-5 > div.col-md-6.col-sm-6 > a:hover > button{
+  color:rgba(168,128,59,1)!important;
 }
 .butn span {
   position: relative;
@@ -350,25 +369,28 @@ a:hover {
 }
 
 .butn-bg {
-  background: #1A237E;
-  border-color: #1A237E;
+  background: linear-gradient(20deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);
+  border-color: linear-gradient(20deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);
   color: #fff;
 }
 .butn-bg:hover span {
-  color: #1A237E;
+  color: linear-gradient(20deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);;
 }
 
 .butn-light, .butn-bord {
   background: #fff;
 }
 .butn-light:after, .butn-bord:after {
-  background: #1A237E;
+  background: linear-gradient(20deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);;
 }
 .butn-light:hover span, .butn-bord:hover span {
   color: #fff !important;
 }
+.butn span:hover{
+  color: rgba(168,128,59,1);
+}
 .butn-light span, .butn-bord span {
-  color: #1A237E;
+  color:rgba(168,128,59,1);
 }
 
 .butn-bord {
@@ -405,7 +427,7 @@ a:hover {
   transition: all .5s;
 }
 .navbar .navbar-nav .active {
-  color: #2576FD !important;
+  color: rgba(168,128,59,1)!important;
 }
 
 .nav-scroll {
@@ -500,7 +522,7 @@ a:hover {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #1A237E;
+  background: linear-gradient(20deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);;
   position: absolute;
   top: 10px;
   right: 0;
@@ -574,7 +596,7 @@ a:hover {
   margin-bottom: 30px;
 }
 .hero .extra-title span {
-  color: #1A237E;
+  color: rgba(168,128,59,1);
 }
 .hero .feat-item {
   padding: 0;
@@ -605,7 +627,7 @@ a:hover {
   height: 90px;
   line-height: 105px;
   color: #777;
-  font-size: 60px;
+  font-size: 48px;
   border-radius: 50%;
   margin-bottom: 15px;
   position: relative;
@@ -618,9 +640,8 @@ a:hover {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #1A237E;
-  background: -webkit-gradient(linear, left top, right bottom, from(#2576FD), to(#1A237E));
-  background: linear-gradient(to bottom right, #2576FD, #1A237E);
+  background-color: rgb(168,128,59); 
+  background: linear-gradient(20deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);
   border-radius: 50%;
   z-index: -1;
   -webkit-transform: scale(0, 0);
@@ -797,6 +818,119 @@ a:hover {
      [ End Hero ]
 -----------------------------------------------------------------*/
 /* ----------------------------------------------------------------
+     [ Soluções ]
+-----------------------------------------------------------------*/
+.second-paragraph-solution{
+  display: flex;
+  position: relative;
+  padding: 2rem 0;
+}
+.second-paragraph-solution p{
+  padding: 0 0 2rem 0;
+}
+.second-paragraph-solution > div{
+  height: 250px;
+ margin: 20px 0;
+   
+
+}
+@media (max-width:1170px){
+  .second-paragraph-solution > div{
+      margin-bottom: 30px !important;
+  }
+}
+
+.second-paragraph-solution button{
+  left: 0;  
+}
+
+
+
+.second-paragraph-solution :nth-child(1) button{
+  
+}
+#solucoes > div > div:nth-child(3) > div:nth-child(2) > div {
+ 
+  padding:0px;
+
+}
+@media only screen and (max-width: 991px){
+  .second-paragraph-solution{
+      display: block;
+      position: relative;
+  }
+  .second-paragraph-solution > div{
+      height: auto;
+      text-align: center;
+      width:100%;
+     
+     
+       
+  
+  }
+  #solucoes > div > div > div.col-md-6.col-sm-6{
+      margin: 0 0 40px 0;
+  }
+  #solucoes{
+      padding: 50px 0 0 0!important;
+  }
+  
+  
+  .second-paragraph-solution button{
+      position:relative !important;
+      margin: 20px 0 0 0!important;
+  }
+  
+  
+  
+  .second-paragraph-solution :nth-child(1) button{
+      margin-left: 15px;
+  }
+  #solucoes > div > div:nth-child(3) > div:nth-child(2) > div {
+     
+      padding:0px;
+  
+  }
+  #solucoes > div > div:nth-child(3){
+      display: flex !important;
+      flex-direction: column-reverse;
+      height: auto;
+  text-align: center;
+  width: 100%;
+  }
+
+}
+@media only screen and (max-width: 768px){
+  #solucoes > div > div:nth-child(3){
+      display:flex !important;
+          flex-direction: column-reverse!important;
+
+
+     
+
+  }
+}
+@media (max-width: 1199px){
+.about_section .imgposabout {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 300px;
+  
+
+}
+.about_section {
+  margin-bottom: 0;
+}
+#about > div > div.col-md-12.col-sm-12 > div > div > div.col-md-6 > h3{
+  margin-top:50px!important;
+}
+}
+/* ----------------------------------------------------------------
+     [ Fim Soluções ]
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
      [ 06 Process ]
 -----------------------------------------------------------------*/
 .process .item {
@@ -828,8 +962,9 @@ a:hover {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-.process .item .cont:hover {
-  background-color: #1A237E;
+.process .item .cont:hover {  
+  background: rgb(168,128,59);
+background: linear-gradient(38deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);
 }
 .process .item .cont:hover h6 {
   color: #fff;
@@ -838,7 +973,7 @@ a:hover {
   color: #eee;
 }
 .process .item .icon {
-  color: #2576FD;
+  color: #daba67;
   font-size: 30px;
   width: 80px;
   height: 80px;
@@ -1299,7 +1434,7 @@ a:hover {
 .contact .contact-info .item .icon {
   float: left;
   font-size: 25px;
-  color: #1A237E;
+  color: rgba(168,128,59,1);
 }
 .contact .contact-info .item .cont {
   margin-left: 50px;
@@ -1342,10 +1477,13 @@ footer .social a {
   color: #999;
   font-size: 16px;
   margin: 15px 5px;
+  border-radius: 8px;
+  
 }
 footer .social a:hover {
-  background-color: #1A237E;
+  background:linear-gradient(20deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);
   color: #fff;
+  transition: 0.8s;
 }
 footer p {
   color: #999;

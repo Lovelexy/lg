@@ -41,7 +41,7 @@ $(function() {
         if(bodyScroll > 100){
 
             navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logotipo-dark.svg');
+            logo.attr('src', 'img/logotipo.svg');
 
         }else{
 
