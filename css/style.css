@@ -159,7 +159,7 @@ a:hover {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .section-head {
@@ -340,6 +340,10 @@ a:hover {
   cursor: pointer;
   outline: none !important;
   overflow: hidden;
+}
+.btn-solution {
+  position: absolute;
+  bottom: 0;
 }
 a:hover .butn  {
   color:rgba(168,128,59,1)!important;
@@ -830,13 +834,13 @@ a:hover .butn  {
 }
 .second-paragraph-solution > div{
   height: 250px;
- margin: 20px 0;
+ margin: auto;
    
 
 }
-@media (max-width:1170px){
+@media (max-width:991px){
   .second-paragraph-solution > div{
-      margin-bottom: 30px !important;
+     
   }
 }
 
@@ -915,7 +919,7 @@ a:hover .butn  {
   position: relative;
   top: 0;
   width: 100%;
-  height: 300px;
+  height: 250px;
   
 
 }
@@ -1451,7 +1455,7 @@ background: linear-gradient(38deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 1
   width: 100%;
   padding: 10px;
   border: 0;
-  background-color: #f9f9f9;
+  background-color: #f5f5f5;
 }
 .contact .form textarea {
   height: 160px;
@@ -1492,6 +1496,10 @@ footer p {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.par-paragraph-solution{
+  display: flex;
+  flex-direction: row;
+}
 
 /* ----------------------------------------------------------------
      [ End Footer ]
@@ -1499,6 +1507,25 @@ footer p {
 /* ----------------------------------------------------------------
  	 [ 16 Responsive ]
 -----------------------------------------------------------------*/
+@media screen and (max-width: 991px) {
+  .logo{
+    width: 60px;
+    padding-left: 15px;
+  }
+  .btn-solution{
+    position: absolute;
+    transform: translate(-50%,100%);
+  }
+  .second-paragraph-solution{
+    display: flex;
+    
+  }
+  .par-paragraph-solution{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
@@ -1526,7 +1553,7 @@ footer p {
   }
 
   .navbar {
-    padding-left: 15px;
+    
   }
   .navbar .navbar-collapse {
     max-height: 340px;
@@ -1583,6 +1610,30 @@ footer p {
   }
 }
 @media screen and (max-width: 767px) {
+  .second-paragraph-solution{
+    flex-direction: column;
+  }
+  .butn{
+    padding: 1rem 2rem;
+    transform: translate(0%);
+    border-radius: 16px;
+
+  }
+  .second-paragraph-solution > div{
+    margin-bottom: 30px;
+  }
+  #solucoes-projetos > div > div:nth-child(3){
+    flex-direction: column-reverse;
+  }
+  #solucoes-obras > div > div.second-paragraph-solution.py-5{
+    flex-direction: column-reverse;
+  }
+  #solucoes-obras > div > div:nth-child(4){
+    flex-direction: column-reverse;
+  }
+  .btn-solution{
+    position: inherit;
+  }
   .mb-sm50 {
     margin-bottom: 50px;
   }
