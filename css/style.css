@@ -68,6 +68,10 @@ p {
   line-height: 1.8;
   margin: 0;
 }
+b, strong{
+  font-size: 1.15rem;
+  color: rgba(168,128,59,1);
+}
 
 img {
   width: 100%;
@@ -659,7 +663,7 @@ a:hover .butn  {
   margin-bottom: 10px;
 }
 .hero .feat-item h6 {
-  color: #1A237E;
+  color: rgba(168,128,59,1);
   font-size: 12px;
   font-weight: 400;
   font-style: italic;
@@ -951,6 +955,17 @@ a:hover .butn  {
 .process .item img.tobotm {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
+}
+.arrowtransform{
+  width: auto;
+    transform: rotateY(180deg);
+    rotate: 331deg;
+    z-index: 99;
+    position: relative;
+    height: 40%;
+    top: 6rem;
+    left: 2rem;
+    opacity: .5;
 }
 .process .item.odd {
   margin-top: 50px;
