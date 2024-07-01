@@ -200,33 +200,39 @@ $(window).on("load",function (){
 
 
     // contact form validator
-    $('#contact-form').validator();
+    
 
-    $('#contact-form').on('submit', function (e) {
-        if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
+     // contact form validator
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+        var url = "contact.php";
 
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $(this).serialize(),
+            success: function (data) {
+                var messageAlert = 'alert-' + data.type;
+                var messageText = data.message;
 
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                        $('#contact-form')[0].reset();
-                    }
+                var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                if (messageAlert && messageText) {
+                    $('#contact-form').find('.messages').html(alertBox);
+                    $('#contact-form')[0].reset();
                 }
-            });
-            return false;
-        }
-    });
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                var messageAlert = 'alert-danger';
+                var messageText = 'Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.';
 
+                var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                $('#contact-form').find('.messages').html(alertBox);
+            }
+        });
+    });
 });
+
+
 
 
 // Slider 

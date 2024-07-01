@@ -382,7 +382,7 @@ a:hover .butn  {
   color: #fff;
 }
 .butn-bg:hover span {
-  color: linear-gradient(20deg, rgba(168,128,59,1) 33%, rgba(218,186,103,1) 100%);;
+  color: rgba(168,128,59,1);
 }
 
 .butn-light, .butn-bord {
@@ -1690,16 +1690,27 @@ footer p {
 }
 @media screen and (max-width: 480px) {
   .header .caption h4 {
-    font-size: 14px;
+    font-size: 32px;
+    font-weight: bold;
+    
   }
   .header .caption h1 {
-    font-size: 25px;
+    font-size: 1rem;
     line-height: 1.4;
+    letter-spacing: 2px;
+  }
+  .header .caption p{
+    font-size: 14px;
   }
 
   .works .filtering span {
     padding: 5px 15px;
   }
+}
+
+.header .caption img{
+  max-width: 120px;
+  margin-bottom: 1.2rem;  
 }
 
 /*# sourceMappingURL=style.css.map */
